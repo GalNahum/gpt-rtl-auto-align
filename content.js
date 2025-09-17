@@ -11,7 +11,7 @@ function updateDirectionBasedOnContent(editableDiv, composerDiv) {
 }
 
 function attachInputHandlerIfNeeded() {
-    const composer = document.getElementById('composer-background');
+    const composer = document.querySelector('[name="prompt-textarea"]')?.parentElement;
     const editable = composer?.querySelector('#prompt-textarea[contenteditable="true"]');
 
     if (!composer || !editable || editable._directionHandlerAttached) return;
